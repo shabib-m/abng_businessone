@@ -49,7 +49,16 @@
 
   </head>
   <body class="<?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($body_attributes); ?>>
-    <?php print $page; ?>
+  <!-- Back to top button -->
+  <button id="to-top-button" onclick="goToTop()" title="Go To Top"
+    class="!fixed z-10 bottom-5 right-5 hidden rounded-full bg-red-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+        <path d="M12 4l8 8h-6v8h-4v-8H4l8-8z" />
+    </svg>
+    <span class="sr-only">Go to top</span>
+</button>
+<!-- End Back to top button -->  
+  <?php print $page; ?>
     <?php print $page_bottom; ?>
     <?php print backdrop_get_js('footer'); ?>
     <!-- <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script> -->
